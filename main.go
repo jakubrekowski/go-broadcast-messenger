@@ -10,7 +10,7 @@ import (
 )
 
 func broadcastDial(message string) {
-	conn, err := net.Dial("udp", "192.168.100.255:9000")
+	conn, err := net.Dial("udp", "255.255.255.255:64571")
 		if err != nil {
 			panic(err)
 		}
@@ -36,7 +36,7 @@ func keyboard(nick string) {
 }
 
 func main() {
-  fmt.Println("Broadcast Messenger v. alpha0.3")
+  fmt.Println("Broadcast Messenger v. 1.0")
 
 // Nick selector
 
@@ -57,8 +57,8 @@ func main() {
 	go keyboard(nick)
 
 	addr := net.UDPAddr{
-		Port: 9000,
-		IP:  	net.ParseIP("192.168.100.255"),
+		Port: 64571,
+		IP:  	net.ParseIP("0.0.0.0"),
 	}
 
 	ln, err := net.ListenUDP("udp", &addr)
