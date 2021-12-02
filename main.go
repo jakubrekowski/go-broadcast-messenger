@@ -50,7 +50,7 @@ func main() {
 
 	nick = strings.Replace(nick, "\n", "", -1)
 
-	broadcastDial(fmt.Sprint("\033[32m> ", nick, " has join the conversation.\n"))
+	broadcastDial(fmt.Sprint("\033[32m> ", nick, " has joined the conversation.\n"))
 
 // main loop
 
