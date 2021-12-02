@@ -1,3 +1,3 @@
-module github.com/jakubrekowski/brodcast-messenger
+module github.com/jakubrekowski/broadcast-messenger
 
 go 1.17
